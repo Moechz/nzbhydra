@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "nzbhydradocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[zh-cn]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 是 NZB 索引器的聚合搜索：把多个 Newznab/Torznab 索引器藏在同一个 API 后面，Sonarr、Radarr 只需填一个索引器地址。它能显示哪个索引器响应了、统计失败与配额，数据库与日志保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 NZBHydra 2 v3.0.0，以非 root 容器运行。用单一 API 聚合多个 NZB 索引器；数据库与日志保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面，在 Config → Indexers 里添加索引器并生成 API Key，然后把 Sonarr/Radarr 指向已发布端口即可。数据库与日志保存在 DockerAppData/nzbhydradocker/config。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。Java 已打包在镜像里，无需额外安装。"
+
+[zh-hk]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 是 NZB 索引器的聚合搜尋：把多個 Newznab/Torznab 索引器藏在同一個 API 後面，Sonarr、Radarr 只需填一個索引器位址。它能顯示哪個索引器回應了、統計失敗與配額，資料庫與日誌保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 NZBHydra 2 v3.0.0，以非 root 容器運行。用單一 API 聚合多個 NZB 索引器；資料庫與日誌保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面，在 Config → Indexers 裡新增索引器並產生 API Key，然後把 Sonarr/Radarr 指向已發佈端口即可。資料庫與日誌保存在 DockerAppData/nzbhydradocker/config。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。Java 已打包在映像裡，無需額外安裝。"
+
+[fr-fr]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[de-de]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[it-it]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[es-es]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[hu-hu]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[ja-jp]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[ko-kr]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[pl-pl]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[ru-ru]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[tr-tr]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[pt-pt]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[ar-sa]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[cs-cz]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[he-il]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[id-id]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[nb-no]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[nl-nl]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[sv-se]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[th-th]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+
+[vi-vn]
+name         = "NZBHydra 2"
+auth         = "theotherp"
+version      = "@@VERSION@@"
+descript     = "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder."
+release_note = "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install."
+

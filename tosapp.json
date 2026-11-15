@@ -1,0 +1,102 @@
+{
+  "app_id": "nzbhydradocker",
+  "title": "NZBHydra 2",
+  "image": "linuxserver/hydra2:version-v3.0.0",
+  "repo_name": "nzbhydra",
+  "mode": "wrapper",
+  "container_port": 5076,
+  "category": [
+    "Download"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/nzbhydradocker/config",
+      "container": "/config"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "theotherp",
+  "upstream_url": "https://github.com/theotherp/nzbhydra2",
+  "upstream_license": "Apache-2.0",
+  "descript": "NZBHydra 2 is a meta search for NZB indexers: it combines many Newznab/Torznab indexers behind one API, so Sonarr, Radarr and friends only need a single indexer entry. It shows which indexers answered, tracks failures and caps, and keeps its database and logs in the application data folder.",
+  "release_note": "1. First release: NZBHydra 2 v3.0.0 from Docker Hub as a non-root container. One search API in front of many NZB indexers; database and logs in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Open the UI, add your indexers under Config -> Indexers and create an API key; then point Sonarr/Radarr at the published port. The database and logs live in DockerAppData/nzbhydradocker/config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet. Java is bundled in the image - nothing else to install.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/init"
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      5076
+    ],
+    "declared_volumes": [
+      "/config"
+    ],
+    "image_healthcheck": [],
+    "digest": "linuxserver/hydra2@sha256:9e52416ba0ee970775e0b3c5f12b22e192c7ed4e33d7d52f28eabc0b60f3184d",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": true,
+      "http_code": "",
+      "state": "running",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "tion not permitted\nforeground: warning: unable to spawn /var/run/s6/etc/cont-init.d/01-envfile: Permission denied\nforeground: warning: unable to spawn /var/run/s6/etc/cont-init.d/10-adduser: Permission denied\nforeground: warning: unable to spawn /var/run/s6/etc/cont-init.d/30-config: Permission denied\nforeground: warning: unable to spawn /var/run/s6/etc/cont-init.d/90-warning: Permission denied\nforeground: warning: unable to spawn /var/run/s6/etc/cont-init.d/99-custom-scripts: Permission denied\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds\ns6-supervise (child): fatal: unable to exec run: Permission denied\ns6-supervise nzbhydra2: warning: unable to spawn ./run - waiting 10 seconds",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:5076/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "nzbhydradocker",
+  "github_repo": "nzbhydra",
+  "upstream_version": "3.0.0",
+  "release_tag_prefix": "v",
+  "version": "3.0.0-1",
+  "help": "https://github.com/Moechz/hydra2/issues",
+  "official": "https://github.com/theotherp/nzbhydra2",
+  "license": "Apache-2.0",
+  "docker_socket": false,
+  "group_add": [],
+  "entrypoint_file": "src/entrypoint.sh",
+  "host_port": 8142,
+  "healthcheck_start_period": "90s",
+  "wrapper_note": "the LinuxServer.io image starts the Java app through s6 as root; s6 cannot run\nin a non-root container, so this wrapper launches the upstream python launcher\ndirectly with the data folder on the mounted volume.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: the upstream s6 init cannot run as uid 1000; the wrapper runs the bundled `nzbhydra2wrapperPy3.py` launcher with `--datafolder /config`.",
+  "translations": {
+    "zh-cn": {
+      "descript": "NZBHydra 2 是 NZB 索引器的聚合搜索：把多个 Newznab/Torznab 索引器藏在同一个 API 后面，Sonarr、Radarr 只需填一个索引器地址。它能显示哪个索引器响应了、统计失败与配额，数据库与日志保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面，在 Config → Indexers 里添加索引器并生成 API Key，然后把 Sonarr/Radarr 指向已发布端口即可。数据库与日志保存在 DockerAppData/nzbhydradocker/config。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。Java 已打包在镜像里，无需额外安装。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 NZBHydra 2 v3.0.0，以非 root 容器运行。用单一 API 聚合多个 NZB 索引器；数据库与日志保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "NZBHydra 2 是 NZB 索引器的聚合搜尋：把多個 Newznab/Torznab 索引器藏在同一個 API 後面，Sonarr、Radarr 只需填一個索引器位址。它能顯示哪個索引器回應了、統計失敗與配額，資料庫與日誌保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面，在 Config → Indexers 裡新增索引器並產生 API Key，然後把 Sonarr/Radarr 指向已發佈端口即可。資料庫與日誌保存在 DockerAppData/nzbhydradocker/config。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。Java 已打包在映像裡，無需額外安裝。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 NZBHydra 2 v3.0.0，以非 root 容器運行。用單一 API 聚合多個 NZB 索引器；資料庫與日誌保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/config` (mounted from `DockerAppData/nzbhydradocker/config`) holds `nzbhydra.yml`, the H2 database, logs and the unpacked application jar.",
+  "design_notes": [
+    "**Upstream launcher instead of s6.** The wrapper runs `nzbhydra2wrapperPy3.py --datafolder /config` as uid 1000; the launcher prepares the jar inside the data folder.",
+    "**One port for UI and API.** Sonarr/Radarr use the same port with the API key."
+  ],
+  "limitations": [
+    "- Needs at least one indexer account; the package ships no indexer credentials.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+    "- Java apps are memory-hungry; the container needs ~512 MB free RAM."
+  ]
+}
